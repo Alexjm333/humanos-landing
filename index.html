@@ -1,0 +1,1250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Human OS by Vieroots — Join the Waiting List</title>
+<meta name="description" content="The operating system for your body. Your genetics, your gut, your blood work and your daily behaviour, read together every day by one system built around one specific body. Join the waiting list.">
+
+<!-- link preview: WhatsApp, iMessage, LinkedIn, Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vieroots">
+<meta property="og:title" content="Human OS by Vieroots — Join the Waiting List">
+<meta property="og:description" content="The operating system for your body. Genetics, gut, blood work and daily behaviour, read together every day. Founding cohorts open soon.">
+<meta property="og:image" content="https://humanos-launch.netlify.app/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Human OS by Vieroots — the five intelligence layers, one model">
+<meta property="og:url" content="https://humanos-launch.netlify.app/">
+<link rel="canonical" href="https://humanos-launch.netlify.app/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Human OS by Vieroots — Join the Waiting List">
+<meta name="twitter:description" content="The operating system for your body. Genetics, gut, blood work and daily behaviour, read together every day.">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23070910'/%3E%3Ctext x='32' y='40' text-anchor='middle' font-family='Helvetica,Arial' font-size='20' font-weight='700' letter-spacing='1' fill='%23FFFFFF'%3EOS%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#05060C; --bg2:#080B15;
+  --ink:#F2F4FA; --mut:#A9AFC4; --dim:#7E8499;
+  --card:rgba(255,255,255,.04); --card-b:rgba(255,255,255,.09);
+  --line:rgba(255,255,255,.08); --line-soft:rgba(255,255,255,.05);
+  --acc:#6C5CE7; --acc2:#8B7FF2; --acc3:#5B86FF;
+  --grad:linear-gradient(120deg,#8B7FF2 0%,#6C5CE7 45%,#5B86FF 100%);
+  --l1:#4D79FF; --l2:#1FB27F; --l3:#FF6A4D; --l4:#6E95FF; --l5:#E0A63A;
+  --disp:"Manrope","Inter","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --body:"Inter","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --mono:"SF Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+::selection{background:rgba(124,108,255,.35)}
+a:focus-visible,.btn:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--acc2);outline-offset:3px;border-radius:8px}
+
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+section{position:relative}
+
+/* scroll progress */
+.progress{position:fixed;top:0;left:0;height:3px;width:0;z-index:100;background:var(--grad)}
+
+/* ---------- type ---------- */
+.disp{font-family:var(--disp);font-weight:800;letter-spacing:-.03em;line-height:1.04}
+.d1{font-size:clamp(42px,6.4vw,76px)}
+.d2{font-size:clamp(30px,4.4vw,50px);line-height:1.08}
+.lede{font-size:clamp(16px,1.6vw,19px);line-height:1.65;color:var(--mut)}
+.body-t{font-size:16px;line-height:1.7;color:var(--mut)}
+.sm{font-size:14px;line-height:1.65;color:var(--mut)}
+.xs{font-size:12.5px;line-height:1.6;color:var(--dim)}
+.mono{font-family:var(--mono);font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--dim)}
+b,strong{font-weight:600;color:var(--ink)}
+.center{text-align:center}
+.center .lede{margin-left:auto;margin-right:auto}
+.grad-t{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+.chip{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border:1px solid var(--line);
+  border-radius:999px;background:rgba(255,255,255,.03);
+  font-family:var(--disp);font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
+.chip i{width:7px;height:7px;border-radius:50%;background:var(--acc2);flex:none;
+  box-shadow:0 0 10px rgba(139,127,242,.9)}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;position:relative;overflow:hidden;
+  background:var(--grad);color:#fff;text-decoration:none;border:0;cursor:pointer;
+  font-family:var(--disp);font-size:15px;font-weight:700;
+  padding:16px 30px;border-radius:999px;transition:transform .18s,box-shadow .18s,filter .18s;white-space:nowrap;
+  box-shadow:0 10px 30px rgba(108,92,231,.35)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 16px 44px rgba(108,92,231,.5);filter:brightness(1.06)}
+.btn .arr{transition:transform .18s}
+.btn:hover .arr{transform:translateX(3px)}
+.btn-sm{padding:12px 22px;font-size:13.5px}
+.btn-ghost{background:transparent;color:var(--ink);border:1px solid var(--line);box-shadow:none}
+.btn-ghost:hover{background:rgba(255,255,255,.05);box-shadow:none;filter:none}
+.btn::before{content:"";position:absolute;top:0;bottom:0;left:-45%;width:38%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.4),transparent);
+  transform:skewX(-18deg);transition:left .55s ease}
+.btn:hover::before{left:125%}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:0;z-index:50;background:rgba(5,6,12,.75);
+  backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid transparent;transition:border-color .3s}
+.nav.scrolled{border-bottom-color:var(--line-soft)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:72px}
+.wm{line-height:1;text-decoration:none;font-family:var(--disp)}
+.wm .name{font-size:21px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;display:block}
+.wm .by{font-size:10.5px;font-weight:600;letter-spacing:.32em;text-transform:uppercase;color:var(--dim);margin-top:5px;display:block}
+
+/* ---------- orbs / glow ---------- */
+.orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none;z-index:0}
+@media (prefers-reduced-motion:no-preference){
+  .orb{animation:drift 20s ease-in-out infinite alternate}
+  .orb.o2{animation-duration:26s;animation-delay:-9s}
+}
+@keyframes drift{from{transform:translate(0,0) scale(1)}to{transform:translate(52px,-40px) scale(1.2)}}
+
+/* ---------- phone ---------- */
+.phone{width:270px;background:#101320;border-radius:46px;padding:9px;
+  border:1px solid rgba(255,255,255,.10);
+  box-shadow:0 1px 2px rgba(0,0,0,.6),0 24px 48px rgba(0,0,0,.5),0 70px 130px rgba(0,0,0,.55)}
+.phone-scr{position:relative;border-radius:37px;overflow:hidden;background:#0C0F1A}
+.phone-scr img{width:100%;height:auto;display:block}
+.phone-scr::after{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;
+  background:linear-gradient(115deg,transparent 42%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.03) 57%,transparent 62%);
+  transform:translateX(-130%)}
+@media (prefers-reduced-motion:no-preference){
+  .phone-scr::after{animation:glare 8s ease-in-out infinite}
+}
+@keyframes glare{14%{transform:translateX(130%)}100%{transform:translateX(130%)}}
+.glow-pool{position:absolute;left:50%;bottom:-34px;transform:translateX(-50%);width:78%;height:70px;
+  background:radial-gradient(50% 50% at 50% 50%, rgba(124,108,255,.5), transparent 72%);filter:blur(20px);z-index:0}
+
+/* ---------- hero ---------- */
+.hero{overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);gap:56px;align-items:center;
+  padding-top:52px;padding-bottom:96px;min-height:calc(100vh - 72px)}
+@supports (height:100svh){.hero .wrap{min-height:calc(100svh - 72px)}}
+.hero-copy h1{margin-top:26px;max-width:660px}
+.hero-copy .lede{margin-top:24px;max-width:480px}
+.hero-cta{margin-top:36px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.hero-note{font-size:13px;color:var(--dim);line-height:1.55}
+.hero-tags{margin-top:44px;display:flex;gap:10px;flex-wrap:wrap}
+.tag{padding:7px 14px;border-radius:999px;border:1px solid var(--line-soft);background:rgba(255,255,255,.02);
+  font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.hero-scene{position:relative;justify-self:center;perspective:1300px;padding:20px 44px 44px}
+.tilt{position:relative;z-index:2;transform:rotateY(-13deg) rotateX(4deg);transform-style:preserve-3d;will-change:transform}
+.hero-scene .phone{width:288px}
+
+/* ---- projected UI: cards lift out of the screen in a loop ---- */
+.fx{position:absolute;inset:0;z-index:3;pointer-events:none;transform-style:preserve-3d}
+.fx-card{position:absolute;border-radius:16px;background:#fff;color:#20232E;text-align:left;
+  box-shadow:0 6px 16px rgba(0,0,0,.25),0 30px 60px rgba(0,0,0,.5);
+  transform:translateZ(16px);will-change:transform}
+.fx-lbl{font-family:var(--mono);font-size:7px;letter-spacing:.14em;color:#8A86A0}
+.fx-plan{top:14.5%;left:-13%;width:92%;padding:12px 14px}
+.fx-plan .t{font-family:var(--disp);font-size:12.5px;font-weight:800;letter-spacing:-.02em;margin-top:4px}
+.fx-plan .i{display:flex;gap:7px;align-items:flex-start;font-size:10px;line-height:1.45;color:#3B3F4E;margin-top:6px}
+.fx-plan .i i{flex:none;width:14px;height:14px;border-radius:50%;background:#EDEAFB;color:#6C5CE7;
+  font-size:8px;font-weight:700;font-style:normal;display:flex;align-items:center;justify-content:center}
+.fx-plan .ok{font-size:9px;font-weight:600;color:#0E8C64;margin-top:8px}
+.fx-score{top:44.5%;right:-12%;width:74%;padding:12px 14px 0;overflow:hidden}
+.fx-score .n{font-family:var(--disp);font-size:34px;font-weight:800;letter-spacing:-.04em;color:#123047;
+  text-align:center;line-height:1;margin-top:6px}
+.fx-score .n small{font-size:11px;font-weight:700;color:#4E6B84}
+.fx-water{position:relative;height:48px;margin:12px -14px 0;
+  background:linear-gradient(180deg,#69B8EE 0%,#2E8BD8 70%,#1E7FD0 100%)}
+.fx-water i{position:absolute;left:-300px;right:-300px;height:16px;top:-13px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='16' viewBox='0 0 300 16'%3E%3Cpath d='M0 12 C40 2 85 2 125 8 C165 14 205 15 245 10 C266 7 284 6 300 12 L300 16 L0 16 Z' fill='%2369B8EE'/%3E%3C/svg%3E") repeat-x}
+.fx-water i.w2{top:-9px;height:14px;opacity:.5;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='14' viewBox='0 0 300 14'%3E%3Cpath d='M0 10 C50 14 95 13 140 7 C180 2 225 2 265 8 C280 10 292 11 300 10 L300 14 L0 14 Z' fill='%23A8D8F5'/%3E%3C/svg%3E") repeat-x}
+.fx-water .bub{position:absolute;border:1px solid rgba(255,255,255,.55);border-radius:50%;opacity:0}
+.fx-water .bub.b1{width:5px;height:5px;left:18%;bottom:4px}
+.fx-water .bub.b2{width:3px;height:3px;left:66%;bottom:2px}
+.fx-water .bub.b3{width:4px;height:4px;left:84%;bottom:6px}
+.fx-water span{position:absolute;left:0;right:0;top:16px;text-align:center;font-family:var(--disp);
+  font-size:8.5px;font-weight:800;letter-spacing:.06em;color:#fff;z-index:2}
+.fx-disc{top:71%;left:-11%;width:88%;padding:11px 14px;background:linear-gradient(120deg,#E8B33C,#D9992A);color:#fff}
+.fx-disc .t{font-family:var(--disp);font-size:12px;font-weight:800;letter-spacing:-.01em}
+.fx-disc .s{font-size:9px;opacity:.92;margin-top:3px}
+.fx-vie{top:4%;right:-14%;display:flex;align-items:center;gap:7px;padding:8px 13px;border-radius:999px;
+  transform:translateZ(110px)}
+.fx-vie .av{width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,#8B7FF2,#6C5CE7);
+  color:#fff;font-family:var(--disp);font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.fx-vie .nm{font-family:var(--disp);font-size:11px;font-weight:800;color:#20232E}
+.fx-vie .on{width:6px;height:6px;border-radius:50%;background:#1FB27F;box-shadow:0 0 8px #1FB27F}
+.fx-plus{position:absolute;bottom:1.8%;left:50%;width:42px;height:42px;margin-left:-21px;border-radius:50%;
+  background:var(--grad);color:#fff;font-size:22px;font-weight:600;display:flex;align-items:center;justify-content:center;
+  transform:translateZ(60px);box-shadow:0 10px 26px rgba(108,92,231,.6)}
+.fx-plus i{position:absolute;inset:0;border-radius:50%;border:2px solid rgba(139,127,242,.8);font-style:normal}
+@media (prefers-reduced-motion:no-preference){
+  .fx-plan{animation:popA 14s ease-in-out infinite}
+  .fx-score{animation:popB 14s ease-in-out infinite}
+  .fx-disc{animation:popC 14s ease-in-out infinite}
+  .fx-vie{animation:vieBob 5.5s ease-in-out infinite}
+  .fx-water i.w1{animation:waveX 6.5s linear infinite}
+  .fx-water i.w2{animation:waveX 9.5s linear infinite reverse}
+  .fx-water .bub{animation:bubRise 4.5s ease-in infinite}
+  .fx-water .bub.b2{animation-delay:1.6s;animation-duration:5.2s}
+  .fx-water .bub.b3{animation-delay:3s;animation-duration:4s}
+  .fx-plus{animation:plusPulse 3.5s ease-in-out infinite}
+  .fx-plus i{animation:ring 3.5s ease-out infinite}
+  .fx-plus i:nth-child(2){animation-delay:.5s}
+}
+@keyframes popA{0%,3%{transform:translateZ(16px)}9%,25%{transform:translateZ(100px) translateX(-12px) scale(1.06)}32%,100%{transform:translateZ(16px)}}
+@keyframes popB{31%,36%{transform:translateZ(16px)}42%,58%{transform:translateZ(100px) translateX(12px) scale(1.07)}65%,0%,100%{transform:translateZ(16px)}}
+@keyframes popC{64%,69%{transform:translateZ(16px)}75%,91%{transform:translateZ(95px) translateX(-10px) scale(1.06)}98%,0%,100%{transform:translateZ(16px)}}
+@keyframes vieBob{0%,100%{transform:translateZ(110px) translateY(0)}50%{transform:translateZ(110px) translateY(-7px)}}
+@keyframes waveX{to{transform:translateX(300px)}}
+@keyframes bubRise{0%{opacity:0;transform:translateY(10px)}25%{opacity:.9}80%{opacity:.6}100%{opacity:0;transform:translateY(-26px)}}
+@keyframes plusPulse{0%,72%,100%{transform:translateZ(60px) scale(1)}80%{transform:translateZ(60px) scale(1.14)}88%{transform:translateZ(60px) scale(1)}}
+@keyframes ring{0%,70%{transform:scale(1);opacity:.8}100%{transform:scale(2.3);opacity:0}}
+@media (prefers-reduced-motion:no-preference){
+  .hero-scene .phone{animation:float 7s ease-in-out infinite}
+}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+/* ---------- giant brand moment ---------- */
+.brand{padding:80px 0 64px;overflow:hidden;border-top:1px solid var(--line-soft)}
+.brand .giant{font-family:var(--disp);font-weight:800;letter-spacing:-.045em;line-height:.95;
+  font-size:clamp(64px,13.5vw,196px);white-space:nowrap;text-align:center;
+  background:linear-gradient(120deg,#FFFFFF 10%,#8B7FF2 55%,#5B86FF 90%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;will-change:transform}
+.brand .sub{margin-top:26px;text-align:center;font-family:var(--disp);font-weight:600;letter-spacing:-.015em;
+  font-size:clamp(17px,2.2vw,23px);color:var(--mut)}
+.brand .sub b{color:var(--ink)}
+
+/* ---------- problem ---------- */
+.problem{padding:84px 0;overflow:hidden}
+.problem h2{margin-top:26px;max-width:820px;margin-left:auto;margin-right:auto}
+.problem .lede{margin-top:22px;max-width:640px}
+.not-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:52px}
+.not{background:var(--card);border:1px solid var(--card-b);border-radius:22px;padding:28px 28px 30px;text-align:left}
+.not h3{font-family:var(--disp);font-size:18px;font-weight:700;display:flex;align-items:center;gap:11px}
+.not h3 i{width:9px;height:9px;border-radius:50%;flex:none;box-shadow:0 0 12px currentColor}
+.not p{font-size:14.5px;line-height:1.65;color:var(--mut);margin-top:11px}
+.figs{display:flex;justify-content:center;margin-top:52px;border-top:1px dashed var(--line);padding-top:48px}
+.figs .f{flex:1;text-align:center}
+.figs .f + .f{border-left:1px dashed var(--line)}
+.figs .n{font-family:var(--disp);font-weight:800;font-size:clamp(40px,5.6vw,64px);letter-spacing:-.04em;line-height:1}
+.figs .c{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin-top:12px}
+.problem .kicker{margin-top:48px;font-family:var(--disp);font-weight:700;letter-spacing:-.02em;
+  font-size:clamp(20px,2.6vw,27px)}
+
+/* ---------- layers ---------- */
+.layers{padding:84px 0;overflow:hidden;border-top:1px solid var(--line-soft)}
+.layers h2{margin-top:26px}
+.layers .lede{margin-top:20px;max-width:660px}
+.orbit-holder{max-width:720px;margin:44px auto 0}
+.art-mobile{display:none}
+.layer-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:56px}
+.lcard{background:var(--card);border:1px solid var(--card-b);border-radius:20px;padding:22px 20px;text-align:left;
+  transition:transform .3s,border-color .3s}
+.lcard:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.18)}
+.lcard h3{font-family:var(--disp);font-size:15.5px;font-weight:700;display:flex;align-items:center;gap:9px}
+.lcard h3 i{width:8px;height:8px;border-radius:50%;flex:none;box-shadow:0 0 10px currentColor}
+.lcard p{font-size:13px;line-height:1.6;color:var(--mut);margin-top:10px}
+.lcard .note{display:block;font-size:11px;line-height:1.5;color:var(--dim);margin-top:10px}
+.layers .outro{margin-top:36px;max-width:620px}
+
+/* ---------- showcase ---------- */
+.showcase{padding:84px 0 80px;overflow:hidden;border-top:1px solid var(--line-soft)}
+.showcase h2{margin-top:26px}
+.showcase .lede{margin-top:20px;max-width:620px}
+.shots{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;margin:60px auto 0;align-items:start}
+.shot-fig{text-align:center;position:relative}
+.shot-scene{position:relative;display:flex;justify-content:center;perspective:1100px;padding-bottom:36px}
+.shot-scene .phone{width:280px;transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+@media (min-width:861px){
+  .shot-fig:nth-child(1) .phone{transform:rotateY(13deg) rotateX(2deg)}
+  .shot-fig:nth-child(3) .phone{transform:rotateY(-13deg) rotateX(2deg)}
+  .shot-fig:nth-child(2) .phone{transform:scale(1.04)}
+  .shot-fig:hover .phone{transform:rotateY(0) rotateX(0) translateY(-10px) scale(1.04)}
+  .shot-fig:nth-child(2).rv{transition-delay:.1s}
+  .shot-fig:nth-child(3).rv{transition-delay:.2s}
+}
+.shot-fig h3{font-family:var(--disp);font-size:clamp(20px,2.3vw,24px);font-weight:700;letter-spacing:-.022em;line-height:1.28;
+  margin-top:14px;padding:0 12px}
+.shot-fig p{font-size:14.5px;line-height:1.65;color:var(--mut);margin-top:11px;padding:0 12px;max-width:400px;margin-left:auto;margin-right:auto}
+.shot-fig .mono{display:block;margin-top:14px;font-size:9.5px}
+
+
+/* showcase phones: floating projected chips */
+.sfx{position:absolute;z-index:3;pointer-events:none;border-radius:999px;background:#fff;color:#20232E;
+  font-family:var(--disp);font-size:10.5px;font-weight:800;letter-spacing:-.01em;
+  padding:9px 14px;display:flex;align-items:center;gap:7px;white-space:nowrap;
+  box-shadow:0 5px 14px rgba(0,0,0,.28),0 24px 48px rgba(0,0,0,.45);transform:translateZ(55px)}
+.sfx i{width:7px;height:7px;border-radius:50%;flex:none;font-style:normal}
+.sfx.green{background:#EAF7F1;color:#0E7A57}
+.sfx.purple{background:linear-gradient(120deg,#8B7FF2,#6C5CE7);color:#fff}
+.sfx.lav{background:#EFECFC;color:#5B4FD6}
+.sfx.a{top:7%;left:-9%}
+.sfx.b{bottom:15%;right:-8%}
+@media (prefers-reduced-motion:no-preference){
+  .sfx.a{animation:sPopA 9s ease-in-out infinite}
+  .sfx.b{animation:sPopB 9s ease-in-out infinite}
+  .shot-fig:nth-child(2) .sfx.a{animation-delay:1.5s}
+  .shot-fig:nth-child(2) .sfx.b{animation-delay:1.5s}
+  .shot-fig:nth-child(3) .sfx.a{animation-delay:3s}
+  .shot-fig:nth-child(3) .sfx.b{animation-delay:3s}
+}
+@keyframes sPopA{0%,8%{transform:translateZ(30px)}16%,38%{transform:translateZ(95px) translateY(-6px) scale(1.07)}48%,100%{transform:translateZ(30px)}}
+@keyframes sPopB{0%,46%{transform:translateZ(30px)}56%,78%{transform:translateZ(95px) translateY(6px) scale(1.07)}88%,100%{transform:translateZ(30px)}}
+
+/* ---------- journey ---------- */
+.journey{padding:84px 0 80px;overflow:hidden;border-top:1px solid var(--line-soft)}
+.journey h2{margin-top:26px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:60px;counter-reset:step}
+.step{counter-increment:step;background:var(--card);border:1px solid var(--card-b);border-radius:20px;padding:26px 24px;
+  text-align:left;transition:transform .3s,border-color .3s}
+.step:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.18)}
+.step::before{content:"0" counter(step);display:inline-flex;align-items:center;justify-content:center;
+  height:28px;padding:0 12px;border-radius:999px;background:rgba(139,127,242,.14);color:var(--acc2);
+  font-family:var(--disp);font-size:12px;font-weight:800;letter-spacing:.08em}
+.step h3{font-family:var(--disp);font-size:16.5px;font-weight:700;line-height:1.3;margin-top:16px}
+.step p{font-size:13.5px;line-height:1.62;color:var(--mut);margin-top:9px}
+.journey-note{margin-top:44px;max-width:680px;margin-left:auto;margin-right:auto}
+.roadmap-row{display:flex;justify-content:center;gap:14px;margin-top:52px;flex-wrap:wrap}
+.rm{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--card-b);
+  border-radius:999px;padding:14px 24px;font-size:13.5px;color:var(--mut);text-align:left}
+.rm i{width:8px;height:8px;border-radius:50%;flex:none;box-shadow:0 0 10px currentColor}
+.rm b{font-family:var(--disp);font-weight:700}
+.rm .mono{font-size:9px;color:var(--acc2)}
+
+/* ---------- stories ---------- */
+.stories{padding:84px 0 80px;overflow:hidden;border-top:1px solid var(--line-soft)}
+.stories h2{margin-top:26px}
+.stories-note{margin-top:20px;max-width:600px;margin-left:auto;margin-right:auto}
+.jr-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:60px;text-align:left}
+.jr{background:var(--card);border:1px solid var(--card-b);border-radius:24px;padding:30px 28px;
+  transition:transform .3s,border-color .3s}
+.jr:hover{transform:translateY(-4px);border-color:rgba(255,255,255,.18)}
+.jr .badge{display:inline-block;padding:6px 12px;border-radius:999px;border:1px solid var(--line);
+  font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.jr .who{font-family:var(--disp);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-top:16px}
+.jr h3{font-family:var(--disp);font-size:19px;font-weight:700;letter-spacing:-.02em;line-height:1.32;margin-top:8px}
+.jr p{font-size:14px;line-height:1.68;color:var(--mut);margin-top:12px}
+
+/* ---------- commitments ---------- */
+.promise{padding:84px 0;overflow:hidden;border-top:1px solid var(--line-soft)}
+.pr-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:60px;text-align:left}
+.pr{background:var(--card);border:1px solid var(--card-b);border-radius:24px;padding:30px 32px}
+.pr h3{font-family:var(--disp);font-size:18px;font-weight:700;display:flex;gap:12px;align-items:center}
+.pr h3 i{width:9px;height:9px;border-radius:50%;flex:none;box-shadow:0 0 12px currentColor}
+.pr p{font-size:14.5px;line-height:1.68;color:var(--mut);margin-top:11px}
+.promise .kicker{margin-top:52px;max-width:720px;margin-left:auto;margin-right:auto;
+  font-size:15px;line-height:1.7;color:var(--mut);text-align:left}
+
+/* ---------- founder ---------- */
+.founder{padding:84px 0 80px;overflow:hidden;border-top:1px solid var(--line-soft)}
+.founder h2{margin-top:26px;max-width:760px;margin-left:auto;margin-right:auto}
+.founder .lede{margin-top:22px;max-width:680px}
+.f-figs{display:flex;justify-content:center;margin-top:56px;border-top:1px dashed var(--line);padding-top:44px}
+.f-figs .f{flex:1;max-width:250px;text-align:center}
+.f-figs .f + .f{border-left:1px dashed var(--line)}
+.f-figs .n{font-family:var(--disp);font-weight:800;font-size:clamp(28px,3.4vw,42px);letter-spacing:-.03em;line-height:1}
+.f-figs .c{font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--dim);margin-top:10px}
+.founder-card{max-width:720px;margin:56px auto 0;background:rgba(139,127,242,.07);
+  border:1px solid rgba(139,127,242,.22);border-radius:24px;padding:38px 42px;text-align:left}
+.founder-card .mono{color:var(--acc2)}
+.founder-card blockquote{font-family:var(--disp);font-size:clamp(18px,2.1vw,22px);font-weight:600;
+  letter-spacing:-.018em;line-height:1.45;margin-top:14px}
+.founder-card .attr{margin-top:18px;font-size:11px;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--dim)}
+
+/* ---------- waitlist ---------- */
+.waitlist{padding:96px 0 90px;overflow:hidden;border-top:1px solid var(--line-soft);text-align:center}
+.wl-giant{font-family:var(--disp);font-weight:800;letter-spacing:-.045em;line-height:.98;
+  font-size:clamp(52px,9.4vw,136px);margin-top:30px;
+  background:linear-gradient(120deg,#FFFFFF 5%,#8B7FF2 50%,#5B86FF 95%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 18px 60px rgba(108,92,231,.35))}
+.wl-line{margin:30px auto 0;max-width:560px;font-size:clamp(16px,1.7vw,19px);line-height:1.65;color:var(--mut)}
+.wl-line b{color:var(--ink)}
+.btn-giant{margin-top:44px;padding:24px 52px;font-size:clamp(17px,1.9vw,21px);border-radius:999px;
+  box-shadow:0 0 0 1px rgba(255,255,255,.12) inset,0 24px 70px rgba(108,92,231,.55)}
+.btn-giant:hover{box-shadow:0 0 0 1px rgba(255,255,255,.18) inset,0 30px 90px rgba(108,92,231,.7)}
+.wl-sub{margin-top:20px;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.wl-perks{display:flex;justify-content:center;gap:12px;margin-top:44px;flex-wrap:wrap}
+.perk{display:flex;align-items:center;gap:10px;padding:12px 20px;border-radius:999px;
+  background:var(--card);border:1px solid var(--card-b);font-size:13.5px;color:var(--mut)}
+.perk i{width:7px;height:7px;border-radius:50%;flex:none;box-shadow:0 0 10px currentColor}
+.perk b{color:var(--ink);font-weight:600}
+.wl-fine{margin:34px auto 0;max-width:480px;font-size:12px;line-height:1.65;color:var(--dim)}
+
+/* ---------- modal ---------- */
+.modal{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:20px}
+.modal[hidden]{display:none}
+.modal-back{position:absolute;inset:0;background:rgba(3,4,9,.8);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.modal-card{position:relative;z-index:2;background:#fff;border-radius:24px;width:min(600px,100%);
+  max-height:min(860px,92vh);overflow-y:auto;box-shadow:0 60px 160px rgba(0,0,0,.8);
+  animation:pop .35s cubic-bezier(.2,.9,.3,1.15)}
+@keyframes pop{from{opacity:0;transform:translateY(26px) scale(.97)}to{opacity:1;transform:none}}
+.modal-x{position:sticky;top:0;margin-left:auto;display:flex;align-items:center;justify-content:center;
+  width:40px;height:40px;border-radius:50%;border:0;cursor:pointer;background:rgba(12,14,20,.08);
+  color:#0C0E14;font-size:20px;line-height:1;float:right;margin:14px 14px 0 0;z-index:3}
+.modal-x:hover{background:rgba(12,14,20,.16)}
+.modal-card iframe{width:100%;min-height:1200px;border:none;display:block}
+.modal-fallback{padding:0 24px 20px;font-size:12.5px;color:#555B69;text-align:center}
+@media (prefers-reduced-motion:reduce){.modal-card{animation:none}}
+
+/* ---------- faq ---------- */
+.faq{padding:84px 0 80px;overflow:hidden;border-top:1px solid var(--line-soft)}
+.faq h2{margin-top:26px}
+.faq-list{margin:52px auto 0;max-width:780px}
+.faq-list details{background:var(--card);border:1px solid var(--card-b);border-radius:18px;margin-bottom:10px}
+.faq-list summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;
+  gap:24px;padding:22px 26px;font-family:var(--disp);font-size:16.5px;font-weight:700;text-align:left}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary .ind{flex:none;width:12px;height:12px;position:relative}
+.faq-list summary .ind::before,.faq-list summary .ind::after{content:"";position:absolute;background:var(--dim);transition:transform .25s}
+.faq-list summary .ind::before{left:0;right:0;top:5px;height:2px}
+.faq-list summary .ind::after{top:0;bottom:0;left:5px;width:2px}
+.faq-list details[open] summary .ind::after{transform:scaleY(0)}
+.faq-list .a{padding:0 56px 24px 26px;font-size:14.5px;line-height:1.7;color:var(--mut);text-align:left}
+
+/* ---------- footer ---------- */
+.footer{border-top:1px solid var(--line-soft);padding:60px 0 44px}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-start;gap:40px;flex-wrap:wrap}
+.footer .fine{margin-top:36px;padding-top:24px;border-top:1px solid var(--line-soft);
+  font-size:12px;line-height:1.7;color:var(--dim);max-width:860px}
+.footer-meta{margin-top:24px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  font-family:var(--disp);font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+
+/* ---------- mobile sticky cta ---------- */
+.sticky-cta{position:fixed;left:16px;right:16px;bottom:16px;z-index:60;display:none;visibility:hidden;
+  transform:translateY(120%);transition:transform .35s cubic-bezier(.2,.8,.2,1),visibility .35s}
+.sticky-cta.show{transform:translateY(0);visibility:visible}
+.sticky-cta a{display:flex;align-items:center;justify-content:center;gap:10px;
+  background:var(--grad);color:#fff;text-decoration:none;font-family:var(--disp);font-weight:700;font-size:15px;
+  padding:17px;border-radius:999px;box-shadow:0 14px 44px rgba(108,92,231,.55)}
+
+/* ---------- reveal ---------- */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .75s ease,transform .75s ease}
+.js .rv.on{opacity:1;transform:none}
+/* staggered child reveal for card grids */
+.js .rv-kids > *{opacity:0;transform:translateY(28px) scale(.97);transition:opacity .7s ease,transform .7s ease}
+.js .rv-kids.on > *{opacity:1;transform:none}
+.js .rv-kids > *:nth-child(2){transition-delay:.09s}
+.js .rv-kids > *:nth-child(3){transition-delay:.18s}
+.js .rv-kids > *:nth-child(4){transition-delay:.27s}
+.js .rv-kids > *:nth-child(5){transition-delay:.36s}
+/* cinematic hero entrance */
+@media (prefers-reduced-motion:no-preference){
+  .js .hero-copy > *{opacity:0;transform:translateY(26px);animation:in .85s cubic-bezier(.2,.7,.2,1) forwards}
+  .js .hero-copy > *:nth-child(2){animation-delay:.09s}
+  .js .hero-copy > *:nth-child(3){animation-delay:.18s}
+  .js .hero-copy > *:nth-child(4){animation-delay:.27s}
+  .js .hero-copy > *:nth-child(5){animation-delay:.36s}
+  .js .hero-scene{opacity:0;animation:in 1s .3s cubic-bezier(.2,.7,.2,1) forwards}
+  .btn-giant{animation:breathe 3.4s ease-in-out infinite}
+}
+@keyframes in{to{opacity:1;transform:none}}
+@keyframes breathe{
+  0%,100%{box-shadow:0 0 0 1px rgba(255,255,255,.12) inset,0 24px 70px rgba(108,92,231,.55)}
+  50%{box-shadow:0 0 0 1px rgba(255,255,255,.18) inset,0 30px 95px rgba(108,92,231,.85)}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .js .rv,.js .rv-kids > *{opacity:1;transform:none;transition:none}
+  .pulse,.spin{animation:none}
+  .tilt{transform:none}
+}
+.pulse{animation:pl 3.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes pl{0%,100%{opacity:.72;transform:scale(1)}50%{opacity:1;transform:scale(1.28)}}
+.spin{animation:sp 90s linear infinite;transform-origin:300px 300px}
+@keyframes sp{to{transform:rotate(360deg)}}
+
+/* ---------- responsive ---------- */
+@media (max-width:1020px){
+  .layer-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:960px){
+  .hero .wrap{grid-template-columns:1fr;gap:44px;min-height:0;padding-top:44px;padding-bottom:64px}
+  .hero-scene{order:2;padding:10px 10px 44px}
+  .tilt{transform:rotateY(-7deg) rotateX(2deg)}
+  .not-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .jr-grid{grid-template-columns:1fr;max-width:560px;margin-left:auto;margin-right:auto}
+  .pr-grid{grid-template-columns:1fr}
+}
+@media (max-width:860px){
+  .shots{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:18px;
+    margin:64px -24px 0;padding:4px 32px 12px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .shots::-webkit-scrollbar{display:none}
+  .shot-fig{flex:0 0 82%;max-width:360px;scroll-snap-align:center}
+  .shot-scene .phone{width:272px}
+}
+@media (max-width:640px){
+  .nav .wrap{height:62px}
+  .nav .btn{padding:10px 18px;font-size:12.5px}
+  .art-desktop{display:none}
+  .art-mobile{display:block;max-width:320px;margin:0 auto}
+  .layer-grid{grid-template-columns:1fr 1fr}
+  .lcard:last-child{grid-column:1 / -1}
+  .steps{grid-template-columns:1fr}
+  .figs{flex-direction:column;gap:28px;padding-top:36px}
+  .figs .f + .f{border-left:0;padding-top:28px;border-top:1px dashed var(--line)}
+  .f-figs{flex-direction:column;gap:26px}
+  .f-figs .f{max-width:none}
+  .f-figs .f + .f{border-left:0;padding-top:26px;border-top:1px dashed var(--line)}
+  .founder-card{padding:28px 26px}
+  .brand{padding:56px 0 44px}
+  .fx-plan{left:-6%}
+  .fx-disc{left:-5%}
+  .fx-score{right:-6%}
+  .fx-vie{right:-7%}
+  .sfx.a{left:-4%}
+  .sfx.b{right:-3%}
+  .problem,.layers,.showcase,.journey,.stories,.promise,.founder,.faq{padding:60px 0 52px}
+  .waitlist{padding:72px 0 66px}
+  .btn-giant{padding:20px 38px}
+  .sticky-cta{display:block}
+  .footer{padding-bottom:120px}
+  .faq-list .a{padding-right:26px}
+  .modal{padding:10px}
+  .modal-card{max-height:94vh;border-radius:18px}
+}
+</style>
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<div class="progress" id="progress" aria-hidden="true"></div>
+
+<!-- ============ shared orbital system (dark) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <radialGradient id="core" cx=".38" cy=".33"><stop offset="0" stop-color="#2A3350"/><stop offset="1" stop-color="#0B1020"/></radialGradient>
+
+  <g id="orbit">
+    <g class="spin" fill="none" stroke="rgba(255,255,255,.06)">
+      <circle cx="300" cy="300" r="104"/><circle cx="300" cy="300" r="140"/><circle cx="300" cy="300" r="176"/>
+      <circle cx="300" cy="300" r="212"/><circle cx="300" cy="300" r="248"/></g>
+
+    <g fill="none" stroke-linecap="round" stroke-width="7">
+      <path d="M300 196 A104 104 0 1 0 385 360" stroke="#4D79FF"/>
+      <path d="M300 160 A140 140 0 1 0 398 400" stroke="#1FB27F"/>
+      <path d="M300 124 A176 176 0 1 0 407 440" stroke="#FF6A4D"/>
+      <path d="M300  88 A212 212 0 1 0 412 480" stroke="#6E95FF"/>
+      <path d="M300  52 A248 248 0 1 0 415 520" stroke="#E0A63A"/></g>
+
+    <g stroke-width="1.4" stroke-linecap="round" stroke-opacity=".75">
+      <path d="M385 360 H554" stroke="#4D79FF"/><path d="M398 400 H554" stroke="#1FB27F"/>
+      <path d="M407 440 H554" stroke="#FF6A4D"/><path d="M412 480 H554" stroke="#6E95FF"/>
+      <path d="M415 520 H554" stroke="#E0A63A"/></g>
+    <g>
+      <circle class="pulse" cx="385" cy="360" r="6.5" fill="#4D79FF"/>
+      <circle class="pulse" style="animation-delay:-.7s" cx="398" cy="400" r="6.5" fill="#1FB27F"/>
+      <circle class="pulse" style="animation-delay:-1.4s" cx="407" cy="440" r="6.5" fill="#FF6A4D"/>
+      <circle class="pulse" style="animation-delay:-2.1s" cx="412" cy="480" r="6.5" fill="#6E95FF"/>
+      <circle class="pulse" style="animation-delay:-2.8s" cx="415" cy="520" r="6.5" fill="#E0A63A"/></g>
+    <g font-family="Manrope,Inter,Helvetica,Arial" font-size="18.5" font-weight="700" letter-spacing="-.3" fill="#F2F4FA">
+      <text x="566" y="357">Genetics</text><text x="566" y="397">Microbiome</text>
+      <text x="566" y="437">Metabolic</text><text x="566" y="477">Biosignal</text><text x="566" y="517">Behaviour</text>
+    </g>
+    <g font-family="Inter,Helvetica,Arial" font-size="11.5" fill="#8A90A6">
+      <text x="566" y="372">EPLIMO, 250+ predispositions</text>
+      <text x="566" y="412">VIEBIOME gut test</text>
+      <text x="566" y="452">Blood markers, tracked</text>
+      <text x="566" y="492">Face scan and wearable</text>
+      <text x="566" y="532">Plate, sleep and movement</text>
+    </g>
+    <g><circle cx="300" cy="196" r="3.6" fill="#4D79FF"/><circle cx="300" cy="160" r="3.6" fill="#1FB27F"/>
+      <circle cx="300" cy="124" r="3.6" fill="#FF6A4D"/><circle cx="300" cy="88" r="3.6" fill="#6E95FF"/>
+      <circle cx="300" cy="52" r="3.6" fill="#E0A63A"/></g>
+
+    <circle cx="300" cy="300" r="70" fill="url(#core)" stroke="rgba(255,255,255,.12)"/>
+    <text x="300" y="291" text-anchor="middle" fill="#fff" font-size="15" font-weight="700" letter-spacing="1.6" font-family="Manrope,Inter,Helvetica,Arial">HUMAN</text>
+    <text x="300" y="311" text-anchor="middle" fill="#fff" font-size="15" font-weight="700" letter-spacing="1.6" font-family="Manrope,Inter,Helvetica,Arial">OS</text>
+    <line x1="272" y1="322" x2="328" y2="322" stroke="rgba(255,255,255,.24)"/>
+    <text x="300" y="338" text-anchor="middle" fill="rgba(255,255,255,.58)" font-size="8" letter-spacing="2.2" font-family="Inter,Helvetica,Arial">ONE MODEL</text>
+  </g>
+
+  <g id="orbit-core-only">
+    <g class="spin" fill="none" stroke="rgba(255,255,255,.06)">
+      <circle cx="300" cy="300" r="104"/><circle cx="300" cy="300" r="140"/><circle cx="300" cy="300" r="176"/>
+      <circle cx="300" cy="300" r="212"/><circle cx="300" cy="300" r="248"/></g>
+    <g fill="none" stroke-linecap="round" stroke-width="7">
+      <path d="M300 196 A104 104 0 1 0 385 360" stroke="#4D79FF"/>
+      <path d="M300 160 A140 140 0 1 0 398 400" stroke="#1FB27F"/>
+      <path d="M300 124 A176 176 0 1 0 407 440" stroke="#FF6A4D"/>
+      <path d="M300  88 A212 212 0 1 0 412 480" stroke="#6E95FF"/>
+      <path d="M300  52 A248 248 0 1 0 415 520" stroke="#E0A63A"/></g>
+    <g>
+      <circle class="pulse" cx="385" cy="360" r="6.5" fill="#4D79FF"/>
+      <circle class="pulse" style="animation-delay:-.7s" cx="398" cy="400" r="6.5" fill="#1FB27F"/>
+      <circle class="pulse" style="animation-delay:-1.4s" cx="407" cy="440" r="6.5" fill="#FF6A4D"/>
+      <circle class="pulse" style="animation-delay:-2.1s" cx="412" cy="480" r="6.5" fill="#6E95FF"/>
+      <circle class="pulse" style="animation-delay:-2.8s" cx="415" cy="520" r="6.5" fill="#E0A63A"/></g>
+    <g><circle cx="300" cy="196" r="3.6" fill="#4D79FF"/><circle cx="300" cy="160" r="3.6" fill="#1FB27F"/>
+      <circle cx="300" cy="124" r="3.6" fill="#FF6A4D"/><circle cx="300" cy="88" r="3.6" fill="#6E95FF"/>
+      <circle cx="300" cy="52" r="3.6" fill="#E0A63A"/></g>
+    <circle cx="300" cy="300" r="70" fill="url(#core)" stroke="rgba(255,255,255,.12)"/>
+    <text x="300" y="291" text-anchor="middle" fill="#fff" font-size="15" font-weight="700" letter-spacing="1.6" font-family="Manrope,Inter,Helvetica,Arial">HUMAN</text>
+    <text x="300" y="311" text-anchor="middle" fill="#fff" font-size="15" font-weight="700" letter-spacing="1.6" font-family="Manrope,Inter,Helvetica,Arial">OS</text>
+    <line x1="272" y1="322" x2="328" y2="322" stroke="rgba(255,255,255,.24)"/>
+    <text x="300" y="338" text-anchor="middle" fill="rgba(255,255,255,.58)" font-size="8" letter-spacing="2.2" font-family="Inter,Helvetica,Arial">ONE MODEL</text>
+  </g>
+</defs></svg>
+
+<!-- ================= NAV ================= -->
+<nav class="nav" id="nav">
+  <div class="wrap">
+    <a class="wm" href="#top" aria-label="Human OS by Vieroots, back to top">
+      <span class="name">Human OS</span><span class="by">by Vieroots</span>
+    </a>
+    <a class="btn btn-sm" href="#waitlist">Join the waiting list <span class="arr">→</span></a>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <span class="orb" data-plx=".06" style="width:480px;height:480px;right:-140px;top:-100px;background:rgba(108,92,231,.22)"></span>
+  <span class="orb o2" data-plx=".1" style="width:380px;height:380px;left:-160px;bottom:-80px;background:rgba(91,134,255,.14)"></span>
+  <div class="wrap">
+    <div class="hero-copy">
+      <span class="chip"><i></i>Personal Health Operating System</span>
+      <h1 class="disp d1">Meet the operating system for <span class="grad-t">your body.</span></h1>
+      <p class="lede">Your genetics, your gut, your blood work and your daily behaviour,
+        read together every day by one system built around one specific body.
+        Not generic. Yours.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#waitlist">Join the waiting list <span class="arr">→</span></a>
+        <span class="hero-note">Free to join. Nothing to buy today.<br>Founding cohorts open in order of the list.</span>
+      </div>
+      <div class="hero-tags">
+        <span class="tag">Made in India</span>
+        <span class="tag">India first</span>
+        <span class="tag">By Vieroots</span>
+      </div>
+    </div>
+    <div class="hero-scene">
+      <div class="tilt" id="heroTilt">
+        <div class="phone">
+          <div class="phone-scr">
+            <img src="trigr-home.webp" width="900" height="1955"
+                 alt="Concept interface of the TRIGR app home screen: today's plan from your coach and your TRIGR Health Score"
+                 fetchpriority="high">
+          </div>
+        </div>
+        <div class="fx" aria-hidden="true">
+          <div class="fx-card fx-vie"><span class="av">V</span><span class="nm">Dr. Vie</span><span class="on"></span></div>
+          <div class="fx-card fx-plan">
+            <div class="fx-lbl">YOUR COACH'S PLAN FOR THIS MORNING</div>
+            <div class="t">Good morning, Arjun! Ready for a great day.</div>
+            <div class="i"><i>1</i>Hydrate with 2 more glasses of water.</div>
+            <div class="i"><i>2</i>Keep lunch light, protein and fibre first.</div>
+            <div class="ok">Your stress is low at 18/100</div>
+          </div>
+          <div class="fx-card fx-score">
+            <div class="fx-lbl" style="text-align:center">TRIGR HEALTH SCORE</div>
+            <div class="n">48<small>/100</small></div>
+            <div class="fx-water"><i class="w1"></i><i class="w2"></i><b class="bub b1"></b><b class="bub b2"></b><b class="bub b3"></b><span>Building</span></div>
+          </div>
+          <div class="fx-card fx-disc">
+            <div class="t">✦ Discoveries about you</div>
+            <div class="s">5 secrets found in your own data. Scratch to reveal.</div>
+          </div>
+          <div class="fx-plus"><i></i><i></i>+</div>
+        </div>
+      </div>
+      <span class="glow-pool"></span>
+    </div>
+  </div>
+</header>
+
+<!-- ================= BRAND MOMENT ================= -->
+<section class="brand" aria-label="Human OS">
+  <div class="giant" id="brandGiant">HUMAN&nbsp;OS</div>
+  <p class="sub rv"><b>One body. One plan.</b> Updated every day.</p>
+</section>
+
+<!-- ================= PROBLEM ================= -->
+<section class="problem" aria-labelledby="problem-h">
+  <span class="orb" data-plx=".07" style="width:420px;height:420px;left:-120px;top:10%;background:rgba(108,92,231,.13)"></span>
+  <div class="wrap center">
+    <span class="chip rv"><i></i>Why generic health advice fails</span>
+    <h2 id="problem-h" class="disp d2 rv">You have spent real money on your health.
+      None of it has ever had a conversation.</h2>
+    <p class="lede rv" style="margin-left:auto;margin-right:auto">Your genetic report is a PDF. Your blood results are in a drawer.
+      Your watch data is in an app, your diet plan on WhatsApp.
+      Each one is telling the truth to an empty room.</p>
+
+    <div class="not-grid rv">
+      <div class="not">
+        <h3><i style="background:var(--l1);color:var(--l1)"></i>Not connected</h3>
+        <p>Five experts, zero conversations. Your gene report never changes what your blood test means.</p>
+      </div>
+      <div class="not">
+        <h3><i style="background:var(--l3);color:var(--l3)"></i>Not continuous</h3>
+        <p>You check your health one day a year. Your body makes decisions on the other 364.</p>
+      </div>
+      <div class="not">
+        <h3><i style="background:var(--l2);color:var(--l2)"></i>Not personal</h3>
+        <p>Every generic plan is a bet that you are average. Your biology says you are not.</p>
+      </div>
+    </div>
+
+    <div class="figs rv">
+      <div class="f"><span class="n count" data-to="1">0</span><div class="c">Day a year measured</div></div>
+      <div class="f"><span class="n count" data-to="364">0</span><div class="c">Days nobody is watching</div></div>
+      <div class="f"><span class="n count grad-t" data-to="8700">0</span><div class="c">Hours between doctor visits</div></div>
+    </div>
+
+    <p class="kicker rv">You didn't fail the plan. <span class="grad-t">The plan never knew you.</span></p>
+  </div>
+</section>
+
+<!-- ================= LAYERS ================= -->
+<section class="layers" aria-labelledby="layers-h">
+  <span class="orb o2" data-plx=".08" style="width:460px;height:460px;right:-160px;top:20%;background:rgba(91,134,255,.1)"></span>
+  <div class="wrap center">
+    <span class="chip rv"><i></i>How Human OS is built</span>
+    <h2 id="layers-h" class="disp d2 rv">Five layers of you, read as <span class="grad-t">one model.</span></h2>
+    <p class="lede rv" style="margin-left:auto;margin-right:auto">Human OS is not one of the layers. Human OS is what happens
+      when all five are connected, kept current, and read together every day.</p>
+
+    <div class="orbit-holder rv" role="img" aria-label="Five intelligence layers converging on one Human OS model: genetics, microbiome, metabolic, biosignal and behaviour">
+      <svg class="art-desktop" viewBox="24 24 716 556"><use href="#orbit"/></svg>
+      <svg class="art-mobile" viewBox="40 40 520 520"><use href="#orbit-core-only"/></svg>
+    </div>
+
+    <div class="layer-grid rv-kids">
+      <div class="lcard">
+        <h3><i style="background:var(--l1);color:var(--l1)"></i>Genetics</h3>
+        <p>The EPLIMO test maps 250+ predispositions into your food, exercise, stress and sleep priorities.</p>
+        <span class="note">Once in a lifetime · results in 3 to 4 weeks</span>
+      </div>
+      <div class="lcard">
+        <h3><i style="background:var(--l2);color:var(--l2)"></i>Microbiome</h3>
+        <p>The VIEBIOME gut test reads which bacteria you carry, what's overgrown, and what's missing.</p>
+        <span class="note">Home kit · results in 3 to 4 weeks</span>
+      </div>
+      <div class="lcard">
+        <h3><i style="background:var(--l3);color:var(--l3)"></i>Metabolic</h3>
+        <p>Blood panels and uploaded reports become tracked trends, so a marker drifting is visible early.</p>
+        <span class="note">Upload any report</span>
+      </div>
+      <div class="lcard">
+        <h3><i style="background:var(--l4);color:var(--l4)"></i>Biosignal</h3>
+        <p>A 30 second face scan reads heart rate, HRV, breathing and stress. Your watch fills in the night.</p>
+        <span class="note">Wellness indicators, not medical measurements</span>
+      </div>
+      <div class="lcard">
+        <h3><i style="background:var(--l5);color:var(--l5)"></i>Behaviour</h3>
+        <p>Scan your plate, log water, sleep and workouts. It shows what you actually did, and how consistently.</p>
+        <span class="note">Logged in TRIGR</span>
+      </div>
+    </div>
+
+    <p class="body-t outro rv" style="margin-left:auto;margin-right:auto"><b>TRIGR</b> is the app where you see it.
+      <b>Dr.&nbsp;Vie</b>, your AI coach, reads it and adjusts your plan every day.</p>
+  </div>
+</section>
+
+<!-- ================= SHOWCASE ================= -->
+<section class="showcase" aria-labelledby="showcase-h">
+  <span class="orb" data-plx=".06" style="width:520px;height:520px;left:50%;top:30%;margin-left:-260px;background:rgba(108,92,231,.1)"></span>
+  <div class="wrap center">
+    <span class="chip rv"><i></i>Inside TRIGR</span>
+    <h2 id="showcase-h" class="disp d2 rv">One app. Your whole biology, <span class="grad-t">made actionable.</span></h2>
+    <p class="lede rv" style="margin-left:auto;margin-right:auto">Every screen starts from the same place:
+      your results, not someone else's averages.</p>
+
+    <div class="shots">
+      <figure class="shot-fig rv">
+        <div class="shot-scene">
+          <div class="phone"><div class="phone-scr">
+            <img src="trigr-nutrition.webp" width="900" height="1955" loading="lazy"
+                 alt="TRIGR nutrition screen concept: scan your meal, today's verdict and macros"
+                 onerror="this.closest('figure').style.display='none'">
+          </div></div>
+          <span class="glow-pool"></span>
+          <span class="sfx green a" aria-hidden="true"><i style="background:#1FB27F"></i>Green zone today</span>
+          <span class="sfx b" aria-hidden="true">1,290 kcal · 3 meals logged</span>
+        </div>
+        <h3>Scan your plate. Get the verdict in seconds.</h3>
+        <p>Calories, macros and a daily zone, measured against your own biology, not a generic chart.</p>
+        <span class="mono">Concept interface</span>
+      </figure>
+
+      <figure class="shot-fig rv">
+        <div class="shot-scene">
+          <div class="phone"><div class="phone-scr">
+            <img src="trigr-ai.webp" width="900" height="1955" loading="lazy"
+                 alt="TRIGR AI chat concept: asking why energy dips after lunch, answered from your own results"
+                 onerror="this.closest('figure').style.display='none'">
+          </div></div>
+          <span class="glow-pool"></span>
+          <span class="sfx purple a" aria-hidden="true">Why do I crash after lunch?</span>
+          <span class="sfx b" aria-hidden="true"><i style="background:#1FB27F"></i>Answered from your reports</span>
+        </div>
+        <h3>Ask anything. It answers from your results.</h3>
+        <p>TRIGR AI reads your genetic, blood and gut reports before it says a word, so the answer is about you.</p>
+        <span class="mono">Concept interface</span>
+      </figure>
+
+      <figure class="shot-fig rv">
+        <div class="shot-scene">
+          <div class="phone"><div class="phone-scr">
+            <img src="trigr-movement.webp" width="900" height="1955" loading="lazy"
+                 alt="TRIGR movement screen concept: recovery status, AI Trainer with live rep counting, and today's training"
+                 onerror="this.closest('figure').style.display='none'">
+          </div></div>
+          <span class="glow-pool"></span>
+          <span class="sfx lav a" aria-hidden="true">Recovery is high. Cleared to push.</span>
+          <span class="sfx b" aria-hidden="true"><i style="background:#FF4D4D"></i>AI Trainer · LIVE</span>
+        </div>
+        <h3>Training that knows when to push you.</h3>
+        <p>Recovery-tuned sessions, and an AI Trainer that counts your reps and checks your form through the camera.</p>
+        <span class="mono">Concept interface</span>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ================= JOURNEY ================= -->
+<section class="journey" aria-labelledby="journey-h">
+  <div class="wrap center">
+    <span class="chip rv"><i></i>Your first 12 weeks</span>
+    <h2 id="journey-h" class="disp d2 rv">From a free face scan to a plan that <span class="grad-t">updates itself.</span></h2>
+
+    <div class="steps rv-kids">
+      <div class="step">
+        <h3>Scan your face. Free.</h3>
+        <p>When your cohort opens, you download TRIGR and take a 30 second face scan: your first biosignals, and your starting Health Score, on day one.</p>
+      </div>
+      <div class="step">
+        <h3>Collect your samples.</h3>
+        <p>Genetics, gut and blood, collected at home or at a Vieroots centre. One session, no repeat visits.</p>
+      </div>
+      <div class="step">
+        <h3>Your model is built.</h3>
+        <p>Results land in 3 to 4 weeks and are read together, not filed separately. This is the moment Human OS switches on.</p>
+      </div>
+      <div class="step">
+        <h3>Coaching, daily.</h3>
+        <p>Dr. Vie turns your model into small daily actions across food, movement, sleep and stress, and adjusts as your data changes.</p>
+      </div>
+    </div>
+
+    <p class="sm journey-note rv"><b>Why cohorts are limited:</b> lab slots, sample logistics and human coaching
+      bandwidth are real, physical constraints. We open access in small founding cohorts so every member
+      gets the full experience. That is exactly why the waiting list exists.</p>
+
+    <div class="roadmap-row rv-kids">
+      <span class="rm"><i style="background:var(--l3);color:var(--l3)"></i><span><span class="mono">In development</span><br><b>TRIGR CGM</b> · a live metabolic feed</span></span>
+      <span class="rm"><i style="background:var(--l4);color:var(--l4)"></i><span><span class="mono">In development</span><br><b>TRIGR Ring</b> · sleep, recovery and HRV</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STORIES ================= -->
+<section class="stories" aria-labelledby="stories-h">
+  <span class="orb o2" data-plx=".07" style="width:400px;height:400px;right:-140px;bottom:0;background:rgba(91,134,255,.09)"></span>
+  <div class="wrap center">
+    <span class="chip rv"><i></i>Member journeys</span>
+    <h2 id="stories-h" class="disp d2 rv">What it looks like when your data <span class="grad-t">finally talks.</span></h2>
+    <p class="sm stories-note rv">Three illustrative journeys, drawn from the patterns we see across real
+      Vieroots members. Names changed, no photos, and no outcome promised. Individual results vary.</p>
+
+    <div class="jr-grid rv-kids">
+      <article class="jr">
+        <span class="badge">Gut × Blood · Illustrative</span>
+        <div class="who">Rakesh, 41 · Mumbai</div>
+        <h3>Every annual check-up said 'fine'. He didn't feel fine.</h3>
+        <p>Rakesh's blood work was normal, year after year, yet the bloating, the 3&nbsp;pm crashes and the brain fog were real.
+          His VIEBIOME results showed elevated yeast levels and low bacterial diversity, a picture of his gut that
+          routine blood work isn't designed to give. His plan changed that week: different foods, a gut re-test
+          on the calendar, and the full picture shared with his doctor.</p>
+      </article>
+      <article class="jr">
+        <span class="badge">Plate × Biosignal · Illustrative</span>
+        <div class="who">Meera, 34 · Dubai</div>
+        <h3>The pattern showed up in her data before she connected it herself.</h3>
+        <p>Meera logged her meals by scanning her plate. Over weeks, Human OS correlated her heavier-carb lunches
+          with her afternoon stress and energy readings, a pattern no single report had ever flagged.
+          Dr. Vie rebuilt her lunch routine, and her afternoons stopped disappearing.</p>
+      </article>
+      <article class="jr">
+        <span class="badge">Trend × Time · Illustrative</span>
+        <div class="who">Thomas, 52 · Bengaluru</div>
+        <h3>Three years of 'normal' reports. One direction of travel.</h3>
+        <p>Each of Thomas's yearly blood tests looked acceptable on its own. Read together as a trend,
+          his metabolic markers had been drifting the wrong way for three years.
+          Human OS surfaced the drift early, while it was still a lifestyle conversation, and his doctor got the full picture on one page.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= COMMITMENTS ================= -->
+<section class="promise" aria-labelledby="promise-h">
+  <div class="wrap center">
+    <span class="chip rv"><i></i>Our commitments</span>
+    <h2 id="promise-h" class="disp d2 rv">Read the fine print. <span class="grad-t">We wrote it to be read.</span></h2>
+
+    <div class="pr-grid rv-kids">
+      <div class="pr">
+        <h3><i style="background:var(--l1);color:var(--l1)"></i>Your doctor stays in charge.</h3>
+        <p>Human OS supports your doctor. It never replaces one. Whenever you need it, we produce a one-page
+          summary of your data for your physician to review.</p>
+      </div>
+      <div class="pr">
+        <h3><i style="background:var(--l2);color:var(--l2)"></i>Your data belongs to you.</h3>
+        <p>You own your EPLIMO and VIEBIOME results, and you can export everything.
+          We will never sell your genetic data to insurers, employers, or anyone else.</p>
+      </div>
+      <div class="pr">
+        <h3><i style="background:var(--l5);color:var(--l5)"></i>A fair exit, in writing.</h3>
+        <p>Change your mind before your samples are collected and you receive a full refund. No forms designed to be lost, no quiet deductions.</p>
+      </div>
+      <div class="pr">
+        <h3><i style="background:var(--l3);color:var(--l3)"></i>We stay accountable.</h3>
+        <p>If you follow your plan for 12 weeks and the markers we agreed on together don't improve,
+          your programme continues free for another 12 weeks while we rework the plan with you.</p>
+      </div>
+    </div>
+
+    <p class="kicker rv"><b>And one honest boundary:</b> we will not promise to predict your future or
+      prevent any disease. Nobody can. What Human OS does is simpler and more useful: it reads what your
+      body is actually doing, every day, and helps you act on it.</p>
+  </div>
+</section>
+
+<!-- ================= FOUNDER ================= -->
+<section class="founder" aria-labelledby="founder-h">
+  <div class="wrap center">
+    <span class="chip rv"><i></i>Who is behind this</span>
+    <h2 id="founder-h" class="disp d2 rv">Built in India. Built on a decade of <span class="grad-t">listening to real bodies.</span></h2>
+    <p class="lede rv" style="margin-left:auto;margin-right:auto">Human OS is built by <b>Vieroots</b>, the wellness company founded by
+      <b>Dr.&nbsp;Sajeev&nbsp;Nair</b>, transformational coach, biohacker and author.
+      Vieroots has spent years running genetic and microbiome testing, biohacking programmes and
+      the Vieroots Biohack Centre. Human OS is all of that experience, connected into one system for the first time.</p>
+
+    <div class="f-figs rv">
+      <div class="f"><span class="n"><span class="count" data-to="25000">0</span>+</span><div class="c">Members across Vieroots programmes</div></div>
+      <div class="f"><span class="n"><span class="count" data-to="250">0</span>+</span><div class="c">Predispositions mapped by EPLIMO</div></div>
+      <div class="f"><span class="n count" data-to="5">0</span><div class="c">Layers, one model</div></div>
+    </div>
+
+    <div class="founder-card rv">
+      <span class="mono">Why founding members matter</span>
+      <blockquote>The first people through the door shape what Human OS becomes.
+        Founding members receive a permanent member number, priority access as cohorts open,
+        and a direct line to the team building it.</blockquote>
+      <div class="attr">Human OS · Founding cohort</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WAITLIST ================= -->
+<section class="waitlist" id="waitlist" aria-labelledby="waitlist-h">
+  <span class="orb" data-plx=".05" style="width:640px;height:640px;left:50%;top:6%;margin-left:-320px;background:rgba(108,92,231,.2)"></span>
+  <div class="wrap">
+    <span class="chip rv"><i></i>Founding cohort</span>
+    <h2 id="waitlist-h" class="wl-giant rv">HOS WAITING<br>LIST</h2>
+    <p class="wl-line rv"><b>Cohort One is the smallest Human OS will ever be.</b>
+      Lab slots and coaching bandwidth cap every cohort, doors open strictly in list order,
+      and pricing reaches the list before anyone else. Being early is the entire advantage.</p>
+
+    <a class="btn btn-giant rv" id="openForm"
+       href="https://api.viegrow.ai/widget/form/jLOlzxm8adcEEJrTwogt" target="_blank" rel="noopener">
+      Join the waiting list <span class="arr">→</span></a>
+    <div class="wl-sub rv">Free · No card · Your position is reserved on signup</div>
+
+    <div class="wl-perks rv-kids">
+      <span class="perk"><i style="background:var(--l2);color:var(--l2)"></i><span><b>Free to join.</b> A waiting list, not a checkout.</span></span>
+      <span class="perk"><i style="background:var(--l4);color:var(--l4)"></i><span><b>Founding member number,</b> permanent.</span></span>
+      <span class="perk"><i style="background:var(--l5);color:var(--l5)"></i><span><b>You hear everything first.</b></span></span>
+    </div>
+
+    <p class="wl-fine rv">We'll only contact you about Human OS. Your details are never sold or shared,
+      and you can leave the list at any time.</p>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="faq" aria-labelledby="faq-h">
+  <div class="wrap center">
+    <span class="chip rv"><i></i>Common questions</span>
+    <h2 id="faq-h" class="disp d2 rv">Asked, answered.</h2>
+
+    <div class="faq-list rv">
+      <details>
+        <summary>What does Human OS cost?<span class="ind"></span></summary>
+        <div class="a">Nothing today. Joining the waiting list is free and carries no commitment.
+          Programme details and pricing will be shared with the waiting list first, before any public announcement.</div>
+      </details>
+      <details>
+        <summary>Is this a medical service?<span class="ind"></span></summary>
+        <div class="a">No. Human OS is a wellness and lifestyle system. It supports your doctor and never replaces one.
+          Face-scan and wearable readings are wellness indicators, not medical measurements, and any medical decision
+          belongs with your physician. When useful, we prepare a one-page summary of your data for your doctor to review.</div>
+      </details>
+      <details>
+        <summary>What happens after I join the list?<span class="ind"></span></summary>
+        <div class="a">You'll receive a confirmation, and after that, launch updates as founding cohorts open.
+          Cohorts unlock in list order and stay deliberately small, because lab capacity and coaching bandwidth are real limits we won't pretend away.</div>
+      </details>
+      <details>
+        <summary>Where is Human OS available?<span class="ind"></span></summary>
+        <div class="a">We launch across India first, with the Gulf and other regions to follow.
+          Join the list wherever you are. Your position is kept as regions open.</div>
+      </details>
+      <details>
+        <summary>What do I need to get started?<span class="ind"></span></summary>
+        <div class="a">A smartphone. The face scan uses your phone's camera, and sample collection for the
+          genetic and gut tests happens at home or at a Vieroots centre. A watch or ring helps but is optional.</div>
+      </details>
+      <details>
+        <summary>Who sees my data?<span class="ind"></span></summary>
+        <div class="a">You, and the coaching system working for you. You own your EPLIMO and VIEBIOME results and can export
+          everything. We never sell your genetic data to insurers, employers, or anyone else.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="wm" href="#top"><span class="name">Human OS</span><span class="by">by Vieroots</span></a>
+      <a class="btn btn-ghost btn-sm" href="#waitlist">Join the waiting list <span class="arr">→</span></a>
+    </div>
+    <p class="fine">Human OS is a wellness and lifestyle programme by Vieroots. It supports your doctor and never
+      replaces one. Face-scan and wearable readings are wellness indicators, not medical measurements.
+      Human OS does not diagnose, treat, or claim to predict or prevent any disease. Member journeys shown are
+      illustrative, with names changed; individual results vary. Screens shown are concept interfaces.</p>
+    <div class="footer-meta">
+      <span>© 2026 Vieroots. All rights reserved.</span>
+      <span>Not generic. Yours.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- mobile sticky cta -->
+<div class="sticky-cta" id="stickyCta" aria-hidden="true">
+  <a href="#waitlist">Join the waiting list <span class="arr">→</span></a>
+</div>
+
+<!-- form modal -->
+<div class="modal" id="wlModal" hidden role="dialog" aria-modal="true" aria-label="HOS Waiting list form">
+  <div class="modal-back" id="wlBack"></div>
+  <div class="modal-card">
+    <button class="modal-x" id="wlClose" aria-label="Close the form">×</button>
+    <iframe
+      data-src="https://api.viegrow.ai/widget/form/jLOlzxm8adcEEJrTwogt"
+      id="inline-jLOlzxm8adcEEJrTwogt"
+      data-layout="{'id':'INLINE'}"
+      data-trigger-type="alwaysShow"
+      data-trigger-value=""
+      data-activation-type="alwaysActivated"
+      data-activation-value=""
+      data-deactivation-type="neverDeactivate"
+      data-deactivation-value=""
+      data-form-name="HOS Waiting list form"
+      data-height="1331"
+      data-layout-iframe-id="inline-jLOlzxm8adcEEJrTwogt"
+      data-form-id="jLOlzxm8adcEEJrTwogt"
+      title="HOS Waiting list form">
+    </iframe>
+    <p class="modal-fallback">Form not loading?
+      <a href="https://api.viegrow.ai/widget/form/jLOlzxm8adcEEJrTwogt" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
+  </div>
+</div>
+
+<script src="https://api.viegrow.ai/js/form_embed.js"></script>
+<script>
+(function(){
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var nav = document.getElementById('nav');
+  var bar = document.getElementById('progress');
+  var onScroll = function(){
+    nav.classList.toggle('scrolled', window.scrollY > 8);
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+  };
+  window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+
+  // ---- form modal ----
+  var modal = document.getElementById('wlModal');
+  var frame = modal.querySelector('iframe');
+  var closeBtn = document.getElementById('wlClose');
+  var lastFocus = null;
+  var openModal = function(e){
+    if (e) e.preventDefault();
+    lastFocus = document.activeElement;
+    if (!frame.src) {
+      var src = frame.getAttribute('data-src');
+      if (location.search.length > 1) src += location.search;
+      frame.src = src;
+    }
+    modal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  };
+  var closeModal = function(){
+    modal.hidden = true;
+    document.body.style.overflow = '';
+    if (lastFocus) lastFocus.focus();
+  };
+  document.getElementById('openForm').addEventListener('click', openModal);
+  closeBtn.addEventListener('click', closeModal);
+  document.getElementById('wlBack').addEventListener('click', closeModal);
+  document.addEventListener('keydown', function(e){ if (e.key === 'Escape' && !modal.hidden) closeModal(); });
+
+  // ---- hero phone on touch/small screens: scroll-driven 3D tilt ----
+  var scene = document.querySelector('.hero-scene');
+  var tilt = document.getElementById('heroTilt');
+  var heroEl = document.querySelector('.hero');
+  if (tilt && heroEl && !reduced && !window.matchMedia('(pointer: fine) and (min-width: 961px)').matches) {
+    var hRaf = null;
+    var heroTiltScroll = function(){
+      hRaf = null;
+      var r = heroEl.getBoundingClientRect();
+      if (r.bottom < -100) return;
+      var p = Math.max(0, Math.min(1, -r.top / (r.height * .7)));
+      tilt.style.transform = 'rotateY(' + (-7 + p * 16) + 'deg) rotateX(' + (2 + p * 3) + 'deg)';
+    };
+    window.addEventListener('scroll', function(){ if (!hRaf) hRaf = requestAnimationFrame(heroTiltScroll); }, {passive:true});
+    heroTiltScroll();
+  }
+
+  // ---- carousel: active screen scales up, neighbours dim (small screens) ----
+  var shotsEl = document.querySelector('.shots');
+  var shotFigs = Array.prototype.slice.call(document.querySelectorAll('.shot-fig'));
+  if (shotsEl && shotFigs.length && !reduced) {
+    var isCar = function(){ return window.matchMedia('(max-width: 860px)').matches; };
+    var cRaf = null;
+    var carApply = function(){
+      cRaf = null;
+      if (!isCar()) {
+        shotFigs.forEach(function(f){
+          f.style.opacity = '';
+          var p = f.querySelector('.phone'); if (p) p.style.transform = '';
+        });
+        return;
+      }
+      var mid = shotsEl.getBoundingClientRect().left + shotsEl.clientWidth / 2;
+      shotFigs.forEach(function(f){
+        var r = f.getBoundingClientRect();
+        var d = Math.min(Math.abs(r.left + r.width / 2 - mid) / r.width, 1);
+        f.style.opacity = (1 - d * .5).toFixed(3);
+        var p = f.querySelector('.phone');
+        if (p) p.style.transform = 'scale(' + (1 - d * .09).toFixed(3) + ') rotateY(' + (d * 4).toFixed(1) + 'deg)';
+      });
+    };
+    var carQueue = function(){ if (!cRaf) cRaf = requestAnimationFrame(carApply); };
+    shotsEl.addEventListener('scroll', carQueue, {passive:true});
+    window.addEventListener('resize', carQueue);
+    window.addEventListener('scroll', carQueue, {passive:true});
+    carApply();
+  }
+
+  // ---- hero phone: cursor parallax (desktop fine pointers) ----
+  if (scene && tilt && !reduced && window.matchMedia('(pointer: fine) and (min-width: 961px)').matches) {
+    var tx = 0, ty = 0, cx = 0, cy = 0, raf = null;
+    var loop = function(){
+      raf = requestAnimationFrame(function(){
+        cx += (tx - cx) * .09; cy += (ty - cy) * .09;
+        tilt.style.transform = 'rotateY(' + (cx - 13) + 'deg) rotateX(' + (cy + 4) + 'deg)';
+        if (Math.abs(tx - cx) > .05 || Math.abs(ty - cy) > .05) loop(); else raf = null;
+      });
+    };
+    scene.addEventListener('mousemove', function(e){
+      var r = scene.getBoundingClientRect();
+      tx = ((e.clientX - r.left) / r.width - .5) * 14;
+      ty = ((e.clientY - r.top) / r.height - .5) * -10;
+      if (!raf) loop();
+    });
+    scene.addEventListener('mouseleave', function(){ tx = 0; ty = 0; if (!raf) loop(); });
+  }
+
+  // ---- scroll parallax (orbs + giant wordmark) ----
+  var plx = Array.prototype.slice.call(document.querySelectorAll('[data-plx]'));
+  var giant = document.getElementById('brandGiant');
+  if (!reduced && (plx.length || giant)) {
+    var pRaf = null;
+    var applyPlx = function(){
+      pRaf = null;
+      var vh = window.innerHeight;
+      plx.forEach(function(el){
+        var r = el.getBoundingClientRect();
+        var mid = r.top + r.height / 2 - vh / 2;
+        el.style.translate = '0 ' + (mid * -parseFloat(el.dataset.plx)).toFixed(1) + 'px';
+      });
+      if (giant) {
+        var g = giant.getBoundingClientRect();
+        var p = (g.top + g.height / 2 - vh / 2) / vh;
+        giant.style.transform = 'translateX(' + (p * 7).toFixed(2) + '%)';
+      }
+    };
+    window.addEventListener('scroll', function(){ if (!pRaf) pRaf = requestAnimationFrame(applyPlx); }, {passive:true});
+    applyPlx();
+  }
+
+  // ---- count-up numbers ----
+  var fmt = function(n){ return n.toLocaleString('en-US'); };
+  var runCount = function(el){
+    var to = parseInt(el.dataset.to, 10);
+    if (reduced) { el.textContent = fmt(to); return; }
+    var t0 = null, dur = 1300;
+    var tick = function(t){
+      if (!t0) t0 = t;
+      var p = Math.min((t - t0) / dur, 1);
+      p = 1 - Math.pow(1 - p, 3);
+      el.textContent = fmt(Math.round(to * p));
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  // ---- reveal on scroll (+ triggers count-up) ----
+  var els = document.querySelectorAll('.rv, .rv-kids');
+  var counts = document.querySelectorAll('.count');
+  if (reduced || !('IntersectionObserver' in window)) {
+    els.forEach(function(el){ el.classList.add('on'); });
+    counts.forEach(function(el){ el.textContent = fmt(parseInt(el.dataset.to, 10)); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('on'); io.unobserve(e.target); }
+      });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:.08});
+    els.forEach(function(el){ io.observe(el); });
+    var co = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ runCount(e.target); co.unobserve(e.target); }
+      });
+    }, {threshold:.6});
+    counts.forEach(function(el){ co.observe(el); });
+  }
+
+  // ---- mobile sticky CTA ----
+  var cta = document.getElementById('stickyCta');
+  var hero = document.querySelector('.hero');
+  var waitlist = document.getElementById('waitlist');
+  if ('IntersectionObserver' in window) {
+    var pastHero = false, seeingList = false;
+    var update = function(){
+      var vis = pastHero && !seeingList && modal.hidden;
+      cta.classList.toggle('show', vis);
+      cta.setAttribute('aria-hidden', String(!vis));
+      if ('inert' in cta) cta.inert = !vis;
+    };
+    new IntersectionObserver(function(en){ pastHero = !en[0].isIntersecting; update(); },
+      {threshold:0}).observe(hero);
+    new IntersectionObserver(function(en){ seeingList = en[0].isIntersecting; update(); },
+      {rootMargin:'0px 0px -20% 0px', threshold:0}).observe(waitlist);
+  }
+})();
+</script>
+</body>
+</html>
