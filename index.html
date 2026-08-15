@@ -41,8 +41,9 @@
   --mono:"SF Mono",ui-monospace,Menlo,Consolas,monospace;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:var(--body);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html{scroll-behavior:smooth;overflow-x:hidden;overflow-x:clip}
+body{font-family:var(--body);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;
+  overflow-x:hidden;overflow-x:clip}
 img,svg{display:block;max-width:100%}
 a{color:inherit}
 ::selection{background:rgba(124,108,255,.35)}
